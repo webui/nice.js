@@ -1,4 +1,6 @@
-Tests shows appropriate code before and after translation from nice.js to JS
+Tests for Nice.js
 =======
 
-Please open each file to check examples.
+Tests shows appropriate code before and after translation from nice.js to JS
+
+Please open each file to check the examples.
