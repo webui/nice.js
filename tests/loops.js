@@ -1,7 +1,7 @@
 /*
  * Loops.
  *
- * Use of semicolumn ";" in end of lines is optional.
+ * Use of semicolon ";" in end of lines is optional.
  *
  * Underscore.js used to provide easy to use tools.
  */
