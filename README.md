@@ -30,4 +30,4 @@ This is part of them:
 
 > Feel free to contact me, add new propositions in comments to files or by creating [issues](https://github.com/webui/nice.js/issues). It will be happy to review your pull requests and discuss with you.
 
--- [Anton Danilchenko](https://github.com/1st)
+-- *[Anton Danilchenko](https://github.com/1st)*
