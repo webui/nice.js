@@ -29,8 +29,16 @@ def arg_parser(params):
 
 
 def compile_file(source):
-    '''Compile file and return result'''
-    return source
+    '''Compile file and return result as list of lines'''
+    result = []
+    for line in source:
+        # get left indentation size
+        line = line.replace('\t', 4 * ' ')
+        indentation_size = len(line) - len(line.lstrip(' '))
+        # clanup line
+        line = line.strip(' ')
+        result.append((indentation_size * ' ') + '->' + line)
+    return result
 
 
 def compile_files(source_dir, destination_dir):
@@ -50,11 +58,11 @@ def compile_files(source_dir, destination_dir):
 
         try:
             with open(file_path) as f:
-                result = compile_file(f.read())
+                result = compile_file(f.readlines())
             # write resulting '.js' file
             if result:
                 with open(file_path_js, 'w+') as f:
-                    f.write(result)
+                    f.writelines(result)
             print "\t{} - {}".format(file_name, "OK")
         except Exception, err:
             print "\t{} - {}".format(file_name, err)
