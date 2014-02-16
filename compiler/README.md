@@ -9,6 +9,12 @@ Compilation can be done manually in command line or automatically with [Grunt.js
 
 ### Run compilation
 
+#### Compilation with JavaScript
+
+Now I am working on create compiler based on [Sweet.js](http://sweetjs.org) project. If it will work well then I upload compiler and provide instruction how to setup compilation with [Grunt.js](http://gruntjs.com).
+
+#### Compilation with python
+
 Now it's possible to run compilation with **python** `python/compile.py` script.
 
  * First argument - path to directory with `.nicejs` files
