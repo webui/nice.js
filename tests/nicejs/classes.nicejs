@@ -1,0 +1,47 @@
+
+// define class with parameters
+class BaseClass {
+    a = null
+    b = 10
+    var x = "hidden property of BaseClass"
+}
+obj = new BaseClass()
+
+
+// define class with parameters and constructor
+class Base2Class {
+    a = null
+    b = 10
+    var x = "hidden property of Base2Class"
+
+    function construct(a, b) {
+        self.a = a
+        self.b = b
+    }
+
+    function add() {
+        return self.a + self.b
+    }
+
+    function get_x() {
+        return x
+    }
+}
+obj = new Base2Class(10, 20)
+
+
+// class inheritance
+class MyClass1 extends Base2Class {
+    c = "ccc"
+    var y = "hidden property of MyClass1"
+
+    // redefine method of parent's class
+    function get_x() {
+        return "Redefined method get_x() of parent's class"
+    }
+
+    function get_y() {
+        return y
+    }
+}
+obj = new MyClass1(10, 20)
