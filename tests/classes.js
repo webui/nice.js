@@ -11,7 +11,7 @@
 class BaseClass {
     a = null
     b = 10
-    _x = "hidden property of BaseClass"
+    var x = "hidden property of BaseClass"
 }
 obj = new BaseClass()
 // -->
@@ -21,7 +21,7 @@ function BaseClass() {
     // properties
     self.a = null;
     self.b = 10;
-    var _x = "hidden property of BaseClass";
+    var x = "hidden property of BaseClass";
 }
 obj = new BaseClass();
 
@@ -30,7 +30,7 @@ obj = new BaseClass();
 class Base2Class {
     a = null
     b = 10
-    var _x = "hidden property of Base2Class";
+    var x = "hidden property of Base2Class"
 
     function construct(a, b) {
         self.a = a
@@ -42,7 +42,7 @@ class Base2Class {
     }
 
     function get_x() {
-        return _x
+        return x
     }
 }
 obj = new Base2Class(10, 20)
@@ -53,7 +53,7 @@ function Base2Class(a, b) {
     // properties
     self.a = null;
     self.b = 10;
-    var _x = "hidden property of Base2Class";
+    var x = "hidden property of Base2Class";
 
     // constructor
     self.a = a;
@@ -75,7 +75,7 @@ obj = new Base2Class(10, 20);
 // class inheritance
 class MyClass1 extends Base2Class {
     c = "ccc"
-    _y = "hidden property of MyClass1"
+    var y = "hidden property of MyClass1"
 
     // redefine method of parent's class
     function get_x() {
@@ -83,7 +83,7 @@ class MyClass1 extends Base2Class {
     }
 
     function get_y() {
-        return _y
+        return y
     }
 }
 obj = new MyClass1(10, 20)
@@ -93,7 +93,7 @@ function MyClass1() {
 
     // properties
     self.c = "ccc";
-    var _y = "hidden property of MyClass1";
+    var y = "hidden property of MyClass1";
 
     // method get_x()
     self.get_x = function get_x() {
@@ -102,7 +102,7 @@ function MyClass1() {
 
     // method get_y()
     self.get_y = function get_y() {
-        return _y;
+        return y;
     }
 }
 _.extend(MyClass1, Base2Class);
