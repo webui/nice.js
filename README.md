@@ -21,7 +21,7 @@ You can find syntax description in folder [tests](/tests).
 This is part of them:
  * [classes](/tests/classes.js) - `class MyClass extends BaseClass {...}`
  * [conditions](/tests/conditions.js) - `if (10 not in list)` or `if (a == b or c and d)`
- * [loops](/tests/loops.js) - `for (x, y in obj)` and `[year for year in years if year <= 30]`
+ * [loops](/tests/loops.js) - `for (x, y in obj)` and `[user.age for user in users if user.age <= 30]`
  * [etc](/tests)
 
 ***
