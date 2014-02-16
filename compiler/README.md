@@ -11,11 +11,9 @@ Compilation can be done manually in command line or automatically with [Grunt.js
 
 Now it's possible to run compilation with python `python/compile.py` script.
 
-```python
-'''
-First argumet - path to directory with `.nicejs` files
-Second argument - path to directory where will be saved resulting `.js` files
-'''
+ * First argumet - path to directory with `.nicejs` files
+ * Second argument - path to directory where will be saved resulting `.js` files
 
+```bash
 compiler/python/compile.py tests/nicejs tests/nicejs/js
 ```
