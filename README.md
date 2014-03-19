@@ -12,6 +12,14 @@ Resulting code is readable like your original code on Nice.js. We transform only
 
 And the greatest part of this project that you can use [classes](/tests/classes.js) like in other OOP languages.
 
+
+### The main problems in JavaScript code
+
+ * ommited keyword `new` to create instance of class
+ * ommited `;` in end of line
+ * omitter `{` and appropriate `}`
+
+
 ***
 
 ### Syntax
