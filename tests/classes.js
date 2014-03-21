@@ -13,19 +13,17 @@ class BaseClass {
     b = 10
     var x = "hidden property of BaseClass"
 }
-obj = new BaseClass()
+obj = BaseClass()
 // -->
 function BaseClass() {
-    return new (function BaseClass () {
-        var self = this;
+    var self = this;
 
-        // properties
-        self.a = null;
-        self.b = 10;
-        var x = "hidden property of BaseClass";
-    });
+    // properties
+    self.a = null;
+    self.b = 10;
+    var x = "hidden property of BaseClass";
 }
-obj = BaseClass();
+obj = new BaseClass();
 
 
 // define class with parameters and constructor
@@ -47,7 +45,7 @@ class Base2Class {
         return x
     }
 }
-obj = new Base2Class(10, 20)
+obj = Base2Class(10, 20)
 // -->
 function Base2Class(a, b) {
     var self = this;
@@ -88,7 +86,7 @@ class MyClass1 extends Base2Class {
         return y
     }
 }
-obj = new MyClass1(10, 20)
+obj = MyClass1(10, 20)
 // -->
 function MyClass1() {
     var self = this;
