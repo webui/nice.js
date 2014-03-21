@@ -18,6 +18,7 @@ And the greatest part of this project that you can use [classes](/tests/classes.
  * ommited keyword `new` to create instance of class
  * ommited `;` in end of line
  * omitter `{` and appropriate `}`
+ * forget to use `var` for local variables
 
 
 ***

@@ -16,14 +16,16 @@ class BaseClass {
 obj = new BaseClass()
 // -->
 function BaseClass() {
-    var self = this;
+    return new (function BaseClass () {
+        var self = this;
 
-    // properties
-    self.a = null;
-    self.b = 10;
-    var x = "hidden property of BaseClass";
+        // properties
+        self.a = null;
+        self.b = 10;
+        var x = "hidden property of BaseClass";
+    });
 }
-obj = new BaseClass();
+obj = BaseClass();
 
 
 // define class with parameters and constructor
