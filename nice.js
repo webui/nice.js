@@ -18,9 +18,9 @@ Array.prototype.last = function last (shift) {
     shift = shift || 0;
     return this[this.length - shift - 1];
 }
-// return part of array from `start` to `end` index
-Array.prototype.range = function range (start, end) {
-    start = start || 0;
-    end = end || this.length -1;
-    return this.slice(-1 * shift);
+
+// check if number is integer
+Number.prototype.isInteger = function isInteger () {
+    var value = this.valueOf();
+    return (value ^ 0) === value;
 }
