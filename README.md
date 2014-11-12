@@ -13,6 +13,22 @@ Resulting code is readable like your original code on Nice.js. We transform only
 And the greatest part of this project that you can use [classes](/tests/classes.js) like in other OOP languages.
 
 
+### Current implementation
+
+Now you can use small JavaScript file that extends your JavaScript syntax with new useful tools. for example, you can get last element of array in this way `arr.last()` or first element with `arr.first()`. Also you can get shifted element from start or end of array in this way `arr.first(2)` and `arr.last(1)`.
+
+To use this script just include it in your HTML page bofore all other script tags.
+
+```javascript
+<script src="https://raw.githubusercontent.com/webui/nice.js/master/nice.js"></script>
+<!-- use it before jQuery and your own scripts -->
+<script src="/static/libs/jquery/jquery-2.1.1.min.js"></script>
+```
+
+Your Pull Request is welcome!
+
+***
+
 ### The main problems in JavaScript code
 
  * ommited keyword `new` to create instance of class
@@ -21,9 +37,7 @@ And the greatest part of this project that you can use [classes](/tests/classes.
  * forget to use `var` for local variables
 
 
-***
-
-### Syntax
+### Syntax (discussion, not implemented yet)
 
 You can find syntax description in folder [tests](/tests).
 
