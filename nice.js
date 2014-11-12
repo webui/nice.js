@@ -8,19 +8,23 @@
  * @url https://github.com/webui/nice.js
  */
 
-// return Nth element from start
-Array.prototype.first = function first (shift) {
-    shift = shift || 0;
-    return this[shift];
-}
-// return Nth element from end
-Array.prototype.last = function last (shift) {
-    shift = shift || 0;
-    return this[this.length - shift - 1];
-}
+if (! Array.prototype.first)
+    // return Nth element from start
+    Array.prototype.first = function first (shift) {
+        shift = shift || 0;
+        return this[shift];
+    }
 
-// check if number is integer
-Number.prototype.isInteger = function isInteger () {
-    var value = this.valueOf();
-    return (value ^ 0) === value;
-}
+if (! Array.prototype.last)
+    // return Nth element from end
+    Array.prototype.last = function last (shift) {
+        shift = shift || 0;
+        return this[this.length - shift - 1];
+    }
+
+if (! Number.prototype.isInteger)
+    // check if number is integer
+    Number.prototype.isInteger = function isInteger () {
+        var value = this.valueOf();
+        return (value ^ 0) === value;
+    }
