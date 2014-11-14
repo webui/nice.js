@@ -8,6 +8,9 @@
  * @url https://github.com/webui/nice.js
  */
 
+
+/* Arrays */
+
 if (! Array.prototype.first)
     // return Nth element from start
     Array.prototype.first = function first (shift) {
@@ -21,6 +24,15 @@ if (! Array.prototype.last)
         shift = shift || 0;
         return this[this.length - shift - 1];
     }
+
+if (! Array.prototype.extend)
+    // extend array (push all values from other array to this one)
+    Array.prototype.extend = function extend (other_array) {
+        other_array.forEach(function(v) { this.push(v) }, this);
+    }
+
+
+/* Numbers */
 
 if (! Number.prototype.isInteger)
     // check if number is integer
