@@ -40,3 +40,16 @@ if (! Number.prototype.isInteger)
         var value = this.valueOf();
         return (value ^ 0) === value;
     }
+
+
+/* Objects */
+
+if (! Object.prototype.extend)
+    // extend current object with values from external object
+    Object.prototype.extend = function extend (obj) {
+        // copy all properties
+        for (var name in obj) {
+            this[name] = obj[name];
+        }
+        return this;
+    }
